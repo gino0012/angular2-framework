@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     'polyfills': './frontend/polyfills.ts',
     'vendor': './frontend/vendor.ts',
-    'app': './frontend/main.ts'
+    'main': './frontend/main.ts'
   },
 
   resolve: {
@@ -18,6 +18,7 @@ module.exports = {
     loaders: [
       {
         test: /\.ts$/,
+		exclude: helpers.root("node_modules"),
         loader: 'ts'
       },
       {
@@ -30,7 +31,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: helpers.root('src', 'app'),
+        exclude: helpers.root('src', 'main'),
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
       },
       {
@@ -43,11 +44,11 @@ module.exports = {
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['app', 'vendor', 'polyfills']
+      name: ['main', 'vendor', 'polyfills']
     }),
 
     new HtmlWebpackPlugin({
-      template: 'src/index.html'
+      template: 'frontend/index.html'
     })
   ]
 };
