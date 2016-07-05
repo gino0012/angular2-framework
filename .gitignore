@@ -1,4 +1,5 @@
 .idea
+*.iml
 frontend/**/*.js*
 backend/**/*.js*
 *.js*
