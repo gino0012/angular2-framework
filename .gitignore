@@ -3,3 +3,9 @@
 node_modules
 typings
 npm-debug.log
+*.js.*
+*.js
+
+!*.json
+!*.conf.js
+!*.config.js
