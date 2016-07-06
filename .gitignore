@@ -5,7 +5,10 @@ typings
 npm-debug.log
 *.js.*
 *.js
+frontend/**/*.js
+frontend/**/*.config.js
+backend/**/*.js.
 
 !*.json
-!*.conf.js
-!*.config.js
+!config/*.js
+!frontend/**/*.config.js
