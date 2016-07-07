@@ -2,8 +2,8 @@
   "name": "angular2-webpack",
   "version": "1.0.0",
   "scripts": {
-    "start": "tsc",
-    "postinstall": "typings install",
+    "start": "node app.js",
+    "postinstall": "typings install & tsc",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings"
