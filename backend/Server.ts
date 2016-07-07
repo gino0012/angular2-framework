@@ -1,3 +1,4 @@
+/// <reference path="../typings/browser.d.ts" />
 import * as express from 'express';
 import * as http from 'http';
 import * as path from 'path';
