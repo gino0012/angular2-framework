@@ -7,7 +7,7 @@ var helpers = require('../config/helpers');
 
 export class Server {
     private app: express.Express;
-    private port = process.env.PORT || 80;
+    private port = process.env.PORT || 3000;
 
     constructor() {
         this.app = express();
