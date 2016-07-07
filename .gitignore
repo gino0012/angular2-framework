@@ -12,3 +12,4 @@ backend/**/*.js.
 !*.json
 !config/*.js
 !frontend/**/*.config.js
+!app.js
