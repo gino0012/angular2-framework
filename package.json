@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node app.js",
-    "postinstall": "typings install",
+    "postinstall": "typings install & ls",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings"
