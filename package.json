@@ -1,8 +1,8 @@
 {
-  "name": "angular2-quickstart",
+  "name": "angular2-webpack",
   "version": "1.0.0",
   "scripts": {
-    "start": "tsc & node ./app.js",
+    "start": "tsc",
     "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
