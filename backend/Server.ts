@@ -1,25 +1,22 @@
 /// <reference path="../typings/index.d.ts" />
 import * as express from 'express';
-import * as http from 'http';
 import * as path from 'path';
-
-
-var helpers = require('../config/helpers');
+import config from '../configs/config';
+import {Routes} from './Routes';
 
 export class Server {
     private app: express.Express;
-    private port = process.env.PORT || 5480;
+    private port: number;
 
     constructor() {
         this.app = express();
+        this.port = config.port;
     }
 
     startServer() {
-        this.app.use(express.static(helpers.root('frontend')));
-        this.app.use('/node_modules',express.static(helpers.root('node_modules')));
+        new Routes(this.app, config);
         this.app.listen(this.port, () => {
             console.log("Server started with port", this.port);
-
         });
     }
 }
