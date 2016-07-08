@@ -1,1 +1,1 @@
-# Angular 2 Framework using webpack
+# Angular 2 Framework
