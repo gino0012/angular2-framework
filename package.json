@@ -2,11 +2,9 @@
   "name": "angular2-webpack",
   "version": "1.0.1",
   "scripts": {
-    "start": "node ./app.js",
-    "postinstall": "typings install & ls",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "typings": "typings"
+    "start": "node app.js",
+    "start-dev": "concurrently \"tsc -w\" \"nodemon app.js\"",
+    "postinstall": "typings install"
   },
   "engines": {
     "node": "6.2.2",
@@ -36,8 +34,6 @@
     "typings": "^1.0.4"
   },
   "devDependencies": {
-    "concurrently": "^2.0.0",
-    "typescript": "^1.8.10",
-    "typings": "^1.0.4"
+    "concurrently": "^2.0.0"
   }
 }

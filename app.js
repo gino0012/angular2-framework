@@ -1,10 +1,5 @@
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 3000;
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
-
-app.listen(port, function () {
-  console.log('Example app listening on port, ', port);
-});
+"use strict";
+/// <reference path="./typings/browser.d.ts" />
+var _server = require('./backend/Server');
+var server = new _server.Server();
+server.startServer();
