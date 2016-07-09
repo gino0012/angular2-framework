@@ -2,13 +2,11 @@
 *.iml
 node_modules
 typings
+report
+coverage
 npm-debug.log
-*.js.*
-*.js
-frontend/**/*.js
-frontend/**/*.config.js
-backend/**/*.js.
+frontend/**/*.js*
+backend/**/*.js*
+configs/**/*.js*
 
-!*.json
 !frontend/**/*.config.js
-!app.js
